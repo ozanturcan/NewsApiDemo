@@ -1,0 +1,6 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="xs_dimension">8dp</dimen>
+    <dimen name="s_dimension">16dp</dimen>
+    <dimen name="m_dimension">24dp</dimen>
+</resources>
