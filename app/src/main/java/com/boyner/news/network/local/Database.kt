@@ -11,7 +11,7 @@ import com.boyner.news.network.local.entity.Source
 import com.boyner.news.network.local.entity.SourceService
 
 
-@Database(entities = [SourceService::class, Source::class, ArticlesService::class, Article::class], version = 1, exportSchema = false)
+@Database(entities = [SourceService::class, Source::class, ArticlesService::class, Article::class], version = 3, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun sourceDao(): SourceDao

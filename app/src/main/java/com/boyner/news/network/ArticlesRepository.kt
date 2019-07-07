@@ -45,4 +45,13 @@ class ArticlesRepository(private val articlesApi: ArticleApi, private val articl
                 }
     }
 
+    fun updateArticleItemInDb(article: Article): Disposable? {
+        return Observable.fromCallable { articlesDao.updateArticle(article) }
+                .subscribeOn(Schedulers.io())
+                .observeOn(Schedulers.io())
+                .subscribe {
+                    Timber.d("Updated ${article.isInReadList} in article from API in DB...")
+                }
+    }
+
 }

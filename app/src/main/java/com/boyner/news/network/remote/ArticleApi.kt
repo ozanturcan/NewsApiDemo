@@ -11,7 +11,7 @@ interface ArticleApi {
     fun getArticleService(
             @Query("page") page: Int,
             @Query("sources") sources: String,
-            @Query("pageSize") pageSize: String = "30"
+            @Query("pageSize") pageSize: String = "50"
     ): Observable<ArticlesService>
 
 }

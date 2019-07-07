@@ -30,7 +30,7 @@ android {
         debug {
             applicationIdSuffix ".debug"
             buildConfigField "String", "DB_FILEPATH", "\"database-debug\""
-            buildConfigField "String", "API_KEY", "\"2398f01de8ee49e4bdb0040abebeccdc\""
+            buildConfigField "String", "API_KEY", "\"86f356733293430495448f1e94418aee\""
             buildConfigField "String", "BASE_URL", "\"https://newsapi.org/v2/\""
         }
 
@@ -67,6 +67,8 @@ dependencies {
     implementation 'androidx.room:room-rxjava2:2.1.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'net.danlew:android.joda:2.10.1.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
 
     kapt 'androidx.room:room-compiler:2.1.0'
 

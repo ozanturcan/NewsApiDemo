@@ -1,14 +1,15 @@
 package com.boyner.news.viewmodel
 
 import com.boyner.news.network.ArticlesRepository
+import com.boyner.news.network.local.entity.Article
 import com.boyner.news.view.articlelist.ArticleList
 import io.reactivex.Observable
+import io.reactivex.disposables.Disposable
 import timber.log.Timber
 
 class ArticleListViewModel(private val articlesRepository: ArticlesRepository) {
 
     fun getArticleList(page: Int, source: String): Observable<ArticleList> {
-        //Create the data for your UI, the newsList lists and maybe some additional data needed as well
         return articlesRepository.getArticleService(page, source)
                 .map {
                     Timber.d("Mapping newsList to UIData...")
@@ -18,5 +19,9 @@ class ArticleListViewModel(private val articlesRepository: ArticlesRepository) {
                     Timber.d("An error occurred $it")
                     ArticleList(emptyList(), "An error occurred", it)
                 }
+    }
+
+    fun updateArticleItem(article: Article): Disposable? {
+        return articlesRepository.updateArticleItemInDb(article)
     }
 }

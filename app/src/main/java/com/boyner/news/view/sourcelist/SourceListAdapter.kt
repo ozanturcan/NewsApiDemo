@@ -25,7 +25,7 @@ class SourceListAdapter(private val sourceList: List<Source>) : RecyclerView.Ada
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SourceListItemViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.sourcelist_viewholder, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.source_list_item_viewholder, parent, false)
         return SourceListItemViewHolder(view)
     }
 

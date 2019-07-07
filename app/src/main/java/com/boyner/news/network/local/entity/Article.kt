@@ -26,5 +26,6 @@ data class Article(
         @ColumnInfo(name = "url") val url: String?,
         @ColumnInfo(name = "urlToImage") val urlToImage: String?,
         @ColumnInfo(name = "publishedAt") val publishedAt: String?,
-        @ColumnInfo(name = "content") val content: String?
+        @ColumnInfo(name = "content") val content: String?,
+        @ColumnInfo(name = "isInReadList") var isInReadList: Boolean
 )

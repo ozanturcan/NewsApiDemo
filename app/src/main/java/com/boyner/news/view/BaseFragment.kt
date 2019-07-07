@@ -3,7 +3,6 @@ package com.boyner.news.view
 import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.Nullable
-import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import com.boyner.news.R
 import io.reactivex.disposables.CompositeDisposable
